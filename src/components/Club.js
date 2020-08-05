@@ -15,7 +15,7 @@ class Club extends Component {
     componentDidMount() {
 
         axios
-            .get('http://localhost:5000/api/players')
+            .get(`${process.env.REACT_APP_ENDPOINT}/api/players`)
             .then(response => {
                 console.log(response)
                 this.setState({
